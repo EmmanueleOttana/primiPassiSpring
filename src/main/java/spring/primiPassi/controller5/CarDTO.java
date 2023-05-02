@@ -10,10 +10,10 @@ import lombok.ToString;
 public class CarDTO {
 
     @NotBlank
-    private String id = "xyz-165";
+    private String id;
     @NotBlank
-    private String modelName = "BMW";
+    private String modelName;
 
-    private double price = 54999.99;
+    private double price;
 
 }
