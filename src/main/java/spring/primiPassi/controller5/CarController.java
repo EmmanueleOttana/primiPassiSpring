@@ -16,8 +16,8 @@ public class CarController {
     }
 
     @PostMapping("/car")
-    public String car(@Valid @RequestBody CarDTO car){
-        return "The car {" + car.toString() +"} is created!";
+    public CarDTO car(@Valid @RequestBody CarDTO car){
+        return car ;
     }
 
 }
