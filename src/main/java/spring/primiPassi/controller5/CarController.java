@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class CarController {
 
     @GetMapping("/car")
-    public String getCar(){
-        return new CarDTO().toString();
+    public CarDTO getCar(){
+        return new CarDTO();
     }
 
     @PostMapping("/car")
-    public CarDTO car(@Valid @RequestBody CarDTO car){
-        return car ;
+    public String car(@Valid @RequestBody CarDTO car){
+        return "The car {" + car.toString() +"} is created!";
     }
 
 }
